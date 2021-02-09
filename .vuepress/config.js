@@ -8,8 +8,6 @@ module.exports = {
       lang: 'ja'
     }
   },
-  base: '/',
-  dest: 'docs/',
   head: [["link", { rel: "icon", href: "/assets/img/favicon.ico" }]],
   title: "hogeDocuments",
   description:
