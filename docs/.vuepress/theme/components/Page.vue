@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import Breadcrumbs from "Breadcrumb.vue";
-import PageEdit from "@theme/components/PageEdit.vue";
-import PageNav from "@theme/components/PageNav.vue";
+import Breadcrumbs from "@theme/components/Breadcrumbs.vue";
+import PageEdit from "@parent-theme/components/PageEdit.vue";
+import PageNav from "@parent-theme/components/PageNav.vue";
 
 export default {
   components: { Breadcrumbs, PageEdit, PageNav },
@@ -30,10 +30,11 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/wrapper.styl'
-.page
-  padding-bottom 2rem
-  display block
+@require '~@parent-theme/styles/wrapper.styl';
+
+.page 
+  padding-bottom: 2rem;
+  display: block;
 
 .vssue
   @extend $wrapper;
