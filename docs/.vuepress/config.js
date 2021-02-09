@@ -1,6 +1,5 @@
 //.vuepress/config.js
 require("dotenv").config();
-const webpack = require("webpack");
 
 module.exports = {
   locales: {
@@ -8,6 +7,7 @@ module.exports = {
       lang: 'ja'
     }
   },
+  base: '/',
   head: [["link", { rel: "icon", href: "/assets/img/favicon.ico" }]],
   title: "hogeDocuments",
   description:
