@@ -8,8 +8,8 @@ module.exports = {
       lang: 'ja'
     }
   },
-  base: '/subdir/.vuepress/dist/',
-  dest: 'docs',
+  base: '/',
+  dest: 'docs/',
   head: [["link", { rel: "icon", href: "/assets/img/favicon.ico" }]],
   title: "hogeDocuments",
   description:
