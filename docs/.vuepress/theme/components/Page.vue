@@ -30,11 +30,10 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '~@parent-theme/styles/wrapper.styl';
-
-.page 
-  padding-bottom: 2rem;
-  display: block;
+@require '../styles/wrapper.styl'
+.page
+  padding-bottom 2rem
+  display block
 
 .vssue
   @extend $wrapper;
