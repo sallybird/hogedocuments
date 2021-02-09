@@ -19,12 +19,11 @@
 </template>
 
 <script>
-import Breadcrumbs from "@theme/components/Breadcrumbs.vue";
 import PageEdit from "@parent-theme/components/PageEdit.vue";
 import PageNav from "@parent-theme/components/PageNav.vue";
 
 export default {
-  components: { Breadcrumbs, PageEdit, PageNav },
+  components: { PageEdit, PageNav },
   props: ["sidebarItems"]
 };
 </script>
