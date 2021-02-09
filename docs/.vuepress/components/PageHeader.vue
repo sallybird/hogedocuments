@@ -18,6 +18,5 @@ export default {
         contributors() { return this.$page.git.contributors; },
         created() { return this.$page.git.created; },
         updated() { return this.$page.git.updated; }
-    }
 }
 </script>
