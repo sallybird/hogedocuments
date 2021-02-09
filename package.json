@@ -1,0 +1,36 @@
+{
+  "name": "KobotDocuments",
+  "version": "1.0.0",
+  "description": "Kobot�J���Ɋւ��h�L�������g���i�[����B",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AI-RPA/KobotDocuments.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AI-RPA/KobotDocuments/issues"
+  },
+  "homepage": "https://github.com/AI-RPA/KobotDocuments#readme",
+  "devDependencies": {
+    "vuepress": "^1.7.1",
+    "vue-router": "3.4.5",
+    "i": "^0.3.6",
+    "@vssue/api-github-v4": "^1.4.0",
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "@vuepress/plugin-medium-zoom": "^1.0.5",
+    "vuepress-plugin-git-log": "^1.0.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
