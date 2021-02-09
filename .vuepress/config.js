@@ -42,9 +42,7 @@ module.exports = {
     ],
     sidebar:  {
     title: 'hoge',   // required
-    path: '/HRコボット/設計書/',      // optional, which should be a absolute path.
-    collapsable: false, 
-    sidebarDepth: 2
+    path: '/HRコボット/設計書/'      // optional, which should be a absolute path.
     },
     repo: "https://github.com/sallybird/hogedocuments/docs",
     docsBranch: "master",
