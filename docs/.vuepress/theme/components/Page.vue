@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Breadcrumbs from "@theme/components/Breadcrumbs.vue";
+import Breadcrumbs from "theme/components/Breadcrumbs.vue";
 import PageEdit from "@theme/components/PageEdit.vue";
 import PageNav from "@theme/components/PageNav.vue";
 
