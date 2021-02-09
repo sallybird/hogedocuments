@@ -38,13 +38,12 @@ module.exports = {
   themeConfig: {
     logo: "/assets/img/logo-grey.png",
     nav:[
-      {text:'Home', link:'/'},
-      { text: 'GitHub', link: 'https://github.com/AI-RPA/KobotDocuments' }
+      {text:'Home', link:'/'}
     ],
     sidebar: [
     {
     title: 'hoge',   // required
-    path: '/',      // optional, which should be a absolute path.
+    path: '/HRコボット/設計書/',      // optional, which should be a absolute path.
     collapsable: false, 
     sidebarDepth: 2
     }
