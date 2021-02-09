@@ -12,18 +12,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AI-RPA/KobotDocuments.git"
+    "url": "git+https://github.com/sallybird/hogedocuments.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AI-RPA/KobotDocuments/issues"
+    "url": "https://github.com/sallybird/hogedocuments/issues"
   },
-  "homepage": "https://github.com/AI-RPA/KobotDocuments#readme",
+  "homepage": "https://github.com/sallybird/hogedocuments#readme",
   "devDependencies": {
     "vuepress": "^1.7.1",
     "vue-router": "3.4.5",
+    "dotenv": "^8.2.0",
+    "moment": "^2.14.1"
     "i": "^0.3.6",
     "@vssue/api-github-v4": "^1.4.0",
     "@vuepress/plugin-back-to-top": "^1.2.0",
