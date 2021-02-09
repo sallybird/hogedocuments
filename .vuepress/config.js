@@ -8,7 +8,7 @@ module.exports = {
       lang: 'ja'
     }
   },
-  head: [["link", { rel: "icon", href: "/public/assets/img/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "/assets/img/favicon.ico" }]],
   title: "hogeDocuments",
   description:
     "The official knowledgebase for all hoge products Portal.",
@@ -36,7 +36,7 @@ module.exports = {
           nlyFirstAndLastCommit: false }
       ]],
   themeConfig: {
-    logo: "/public/assets/img/logo-grey.png",
+    logo: "/assets/img/logo-grey.png",
     nav:[
       {text:'Home', link:'/'}
     ],
