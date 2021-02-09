@@ -24,7 +24,7 @@ module.exports = {
 [
         // Git Log/Details
         "git-log", {
-          additionalArgs: '--no-merge',
+          additionalArgs: '--no-merges',
           nlyFirstAndLastCommit: false }
       ]],
   themeConfig: {
