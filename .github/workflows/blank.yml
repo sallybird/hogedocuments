@@ -12,22 +12,11 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
       
-    - name: Build and Deploy
-      uses: testthedocs/github-pages-deploy-action@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
-        BASE_BRANCH: master # The branch the action should deploy from.
-        BRANCH: gh-pages # The branch the action should deploy to.
-        BUILD_DIR: docs/ # The folder the action should deploy.
-        BUILD_SCRIPT: npm install && npm run-script build
-        # The build script the action should run prior to deploying.
-   
-    - name: Cache multiple paths
-      uses: actions/cache@v2
+    - run: npm ci
+    - run: npm run build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-       path: |
-        ~/cache
-        !~/cache/exclude
-        **/node_modules
-       key: ${{ runner.os }}-${{ hashFiles('**/lockfiles') }}
-        
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
