@@ -1,7 +1,0 @@
-# hogehoge
-
-<PageHeader />
-
-hogehogehoge
-
-<PageFooter />
