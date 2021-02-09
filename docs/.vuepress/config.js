@@ -1,4 +1,6 @@
-const moment = require('moment');
+//.vuepress/config.js
+require("dotenv").config();
+const webpack = require("webpack");
 
 module.exports = {
   locales: {
@@ -7,87 +9,48 @@ module.exports = {
     }
   },
   base: '/',
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ],
+  head: [["link", { rel: "icon", href: "/assets/img/favicon.ico" }]],
+  title: "hogeDocuments",
+  description:
+    "The official knowledgebase for all hoge products Portal.",
+  markdown: {
+    lineNumbers: true
+  },
+  configureWebpack: config => {
+    // Set environment variables based on NODE_ENV
+    const env =
+      process.env.NODE_ENV === "production"
+        ? { ...process.env }
+        : { ...process.env.development };
+    return { plugins: [new webpack.EnvironmentPlugin(env)] };
+  },
   plugins: [
     '@vuepress/back-to-top',
     [
     '@vuepress/medium-zoom',
           { selector: 'img'}
 　　],
-    [
-      '@vuepress/last-updated',
-      {
-        transformer: (timestamp, lang) => {
-          // Don't forget to install moment yourself
-          const moment = require('moment')
-          require('moment-timezone')
-          moment.tz.setDefault('Asia/Tokyo')
-          return moment(timestamp).format('yyyy/MM/DD H:mm:ss') 
-        }
-      }
-    ],[
+[
         // Git Log/Details
-        "git-log", { onlyFirstAndLastCommit: false }
+        "git-log", {
+          additionalArgs: '--no-merge',
+          nlyFirstAndLastCommit: false }
       ]],
   themeConfig: {
-    lastUpdated: '最終更新',
+    logo: "/assets/img/logo-grey.png",
     nav:[
       {text:'Home', link:'/'},
-      { text: 'GitHub', link: 'https://github.com/AI-RPA/KobotDocuments' }
+      { text: 'GitHub', link: 'https://github.com/sallybird/hogedocuments' }
     ],
     sidebar: [
     {
-    title: 'HRコボット',   // required
+    title: 'hoge',   // required
     path: '/',      // optional, which should be a absolute path.
     collapsable: false, 
-    sidebarDepth: 3, 
-    children: [
-  [ '/HRコボット/要件定義書/', '要件定義書' ],
-  [ '/HRコボット/設計書/','システム設計書'],
-  [ '/HRコボット/運用設計書/','運用設計書'],
-  [ '/HRコボット/導入作業手順書/','導入作業手順書']
-    ]
-  },
-  {
-    title: '不動産コボット',   // required
-    path: '/',      // optional, which should be a absolute path.
-    collapsable: false, 
-    sidebarDepth: 3, 
-    children: [
-  [ '/不動産コボット/要件定義書/','要件定義書'],
-  [ '/不動産コボット/設計書/','システム設計書'],
-  [ '/不動産コボット/運用設計書/','運用設計書'],
-  [ '/不動産コボット/導入作業手順書/','導入作業手順書'],
-  [ '/不動産コボット/撤去作業手順書/','撤去作業手順書']
-    ]
-  },
-  {
-    title: '面接コボット',   // required
-    path: '/',      // optional, which should be a absolute path.
-    collapsable: false, 
-    sidebarDepth: 3, 
-    children: [
-  [ '/面接コボット/要件定義書/','要件定義書'],
-  [ '/面接コボット/設計書/','システム設計書'],
-  [ '/面接コボット/運用設計書/','運用設計書']
-    ]
-  },
-  {
-    title: 'インフラ仕様',   // required
-    path: '/',      // optional, which should be a absolute path.
-    collapsable: false, 
-    sidebarDepth: 3, 
-    children: [
-  [ '/共通/','共通インフラ仕様'],
-  [ '/HRコボット/設計書/共通/HRコボット_インフラ設計.md','HRコボット'],
-  [ '/不動産コボット/設計書/共通/不動産コボット_インフラ設計.md','不動産コボット'],
-  [ '/面接コボット/設計書/共通/面接コボット_インフラ設計.md','面接コボット']
-    ]
-  }
-    ],
-    repo: "https://github.com/AI-RPA/KobotDocuments/docs",
+    sidebarDepth: 2
+    }
+  ],
+    repo: "https://github.com/sallybird/hogedocuments/docs",
     docsBranch: "master",
     docsDir: "site",
     editLinks: true,
