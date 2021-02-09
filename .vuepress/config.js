@@ -9,7 +9,7 @@ module.exports = {
     }
   },
   base: '/',
-  dest: 'posts',
+  dest: 'docs',
   head: [["link", { rel: "icon", href: "/assets/img/favicon.ico" }]],
   title: "hogeDocuments",
   description:
