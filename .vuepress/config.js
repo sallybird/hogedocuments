@@ -8,7 +8,7 @@ module.exports = {
       lang: 'ja'
     }
   },
-  head: [["link", { rel: "icon", href: "/assets/img/favicon.ico" }]],
+  head: [["link", { rel: "icon", href: "/public/assets/img/favicon.ico" }]],
   title: "hogeDocuments",
   description:
     "The official knowledgebase for all hoge products Portal.",
@@ -36,21 +36,19 @@ module.exports = {
           nlyFirstAndLastCommit: false }
       ]],
   themeConfig: {
-    logo: "/assets/img/logo-grey.png",
+    logo: "/public/assets/img/logo-grey.png",
     nav:[
       {text:'Home', link:'/'}
     ],
-    sidebar: [
-    {
+    sidebar:  {
     title: 'hoge',   // required
     path: '/HRコボット/設計書/',      // optional, which should be a absolute path.
     collapsable: false, 
     sidebarDepth: 2
-    }
-  ],
-    repo: "https://github.com/AI-RPA/KobotDocuments/docs",
+    },
+    repo: "https://github.com/sallybird/hogedocuments/docs",
     docsBranch: "master",
-    docsDir: "site",
+    docsDir: "docs",
     editLinks: true,
     nextLinks: false,
     prevLinks: false,
