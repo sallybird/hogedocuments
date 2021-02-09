@@ -12,13 +12,12 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
       
-    - run: npm install && npm run-script build
-
     - name: Build and Deploy
-      uses: grasilife/github-pages-deploy-action@master
+      uses: testthedocs/github-pages-deploy-action@master
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
         BASE_BRANCH: master # The branch the action should deploy from.
         BRANCH: gh-pages # The branch the action should deploy to.
-        FOLDER: build # The folder the action should deploy.
+        BUILD_DIR: docs/ # The folder the action should deploy.
         BUILD_SCRIPT: npm install && npm run-script build
+        # The build script the action should run prior to deploying.
