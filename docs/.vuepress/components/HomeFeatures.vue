@@ -5,7 +5,7 @@
       <h2>MV Dashboard</h2>
     <div class="feature">
       <h2>Proman</h2>
-      <p><a href="./HRコボット/設計書/forタイムカード/基本設計/forタイムカード/[HRコボット_forタイムカード]基本設計書.md">Main (Coming Soon!)</a><br /></p>
+      <p><a href="./HRコボット/設計書/forタイムカード/基本設計/forタイムカード/README.md">Main (Coming Soon!)</a><br /></p>
     </div>
   </div>
 </template>
